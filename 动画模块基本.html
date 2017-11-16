@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    div{
+        width: 100px;
+        height: 100px;
+        background: red;
+        animation:move 1s;
+        /* 运动曲线 */
+        animation-timing-function:linear;
+        /* 运动次数 */
+        animation-iteration-count: 3;
+        /* 动画执行完毕后是否往返 */
+        animation-direction:alternate;
+        /* 控制运动状态 running默认状态*/
+        animation-play-state:running;
+
+        /* 指定动画等待状态与结束状态样式 默认none */
+        /* 指定第一帧就是0%得样式 */
+        animation-fill-mode:backwards;
+        /* 指定动画结束后保持结束位置样式 */
+        animation-fill-mode:forwards;
+        /* 前面两者结合 */
+        animation-fill-mode:both;
+
+        /* 连写 动画名，动画时长，运动速度，延迟时间，执行次数，是否往返*/
+        animation: move 2s linear 2s 3 normal;
+    }
+    div:hover {
+        /* 控制运动状态 暂停*/
+        animation-play-state:paused;
+    }
+    @keyframes move {
+        from{
+            margin-left:0px;
+        }
+        to{
+            margin-left:200px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

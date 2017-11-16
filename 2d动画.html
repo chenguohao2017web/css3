@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        ul{
+            padding: 0;list-style: none;width: 800px;height: 500px;margin:0 auto;border:1px solid black;
+        }
+        ul li {
+            width: 200px;
+            height: 100px;
+            background: red;
+            margin-top:10px;
+            transition:all 1s;
+            /* 注意 以下属性将改变操作2d动画的参考点，水平方向200px 垂直为0  默认不设置为元素中心点 */
+            /* transform-origin:200px 0; */
+            /* transform-origin:center center; */
+            transform-origin:left top;  以左上角为参考点
+            /* transform-origin:100% 0%;  等同 元素宽度水平便宜200px 垂直为0； */
+        }
+        ul:hover li:nth-child(1){
+            transform:translate(100px,100px);
+        }
+        ul:hover li:nth-child(2){
+            transform:rotate(180deg);
+        }
+        ul:hover li:nth-child(3){
+            transform:scale(2,2)
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>移动 transform:translate(100ox,100px)</li>
+        <li>旋转 transform:rotate(180deg)</li>
+        <li>缩放 transform:scale(2,2)  默认为水平垂直都为1   设置水平垂直都缩放2倍</li>
+    </ul>
+</body>
+</html>

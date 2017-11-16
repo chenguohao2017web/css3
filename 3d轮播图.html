@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateY(0deg) rotateX(0deg);
+            animation:slide 8s linear 0s infinite normal;
+        }
+        body {
+            perspective:1000px;
+        }
+        @keyframes slide {
+            from{
+                transform:rotateX(0deg);
+            }
+            to{
+                transform:rotateX(360deg);
+            }
+        }
+        ul li {
+            font-size:40px;
+            text-align: center;
+            line-height: 300px;
+            height: 300px;
+            width: 300px;
+            position: absolute;
+        }
+        ul li:nth-child(1){
+            background: red;
+            transform:rotateX(90deg) translateZ(150px) scale(2,1);
+        }
+        ul li:nth-child(2){
+            background: yellow;
+            transform:rotateX(180deg) translateZ(150px) scale(2,1);
+        }
+        ul li:nth-child(3){
+            background: orange;
+            transform:rotateX(270deg) translateZ(150px) scale(2,1);
+        }
+        ul li:nth-child(4){
+            background: fuchsia;
+            transform:rotateX(0deg) translateZ(150px) scale(2,1);
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</body>
+
+</html>
